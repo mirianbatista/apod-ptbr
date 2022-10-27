@@ -15,7 +15,7 @@ selected = option_menu(None, ["Imagem de hoje", "Outras datas", "Sobre o APOD"],
     icons=['calendar2-event', 'search', "info-circle"], 
     menu_icon="cast", default_index=0, orientation="horizontal",
     styles={
-        "nav-link-selected": {"background-color": "blue"},
+        "nav-link-selected": {"background-color": "#0f4c81"},
     })
 
 API_KEY = st.secrets["API_KEY"]
