@@ -54,7 +54,7 @@ if selected == 'Outras datas':
             st.error('Ainda não podemos viajar para o futuro, tente outra data!', icon="🖖")
         elif (date_apod < first_apod):
             st.error('A Imagem Astronômica do Dia mais antiga é de 16 de junho de 1995!', icon="🚨")
-            # o streamlit só permite buscas a partir de 20 de outubro de 2012
+            # o streamlit só permite buscas a partir de 20 de outubro de 2012 pelo calendário, mas dá pra digitar mais antigas
         else:
             url = f'https://api.nasa.gov/planetary/apod?api_key={API_KEY}&date={date_apod}' 
             response = requests.get(url)
@@ -78,7 +78,7 @@ if selected == 'Sobre o APOD':
     st.write("""
     O site original da Imagem Astronômica do Dia, em inglês Astronomy Picture of the Day (APOD) foi criado, é escrito, coordenado e editado desde 1995 por Robert Nemiroff e Jerry Bonnell. O APOD contém a maior coleção de imagens astronômicas da internet. Mais detalhes podem ser encontrados nas páginas [Sobre](https://apod.nasa.gov/apod/lib/about_apod.html) e [Perguntas Frequentes](https://apod.nasa.gov/apod/ap_faq.html) do site oficial do APOD.
     
-    Esta versão brasileira desse projeto maravilhoso utiliza a biblioteca [Easy Google Translate](https://github.com/ahmeterenodaci/easygoogletranslate) para traduzir os textos originais para português. Você pode contribuir [aqui](https://github.com/mirianbatista/apod-br).
+    Esta versão brasileira desse projeto maravilhoso utiliza a biblioteca [Easy Google Translate](https://github.com/ahmeterenodaci/easygoogletranslate) para traduzir os textos originais para português. Você pode contribuir [aqui](https://github.com/mirianbatista/apod-ptbr).
     """)
 
 
