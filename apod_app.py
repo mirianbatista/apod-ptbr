@@ -61,7 +61,8 @@ if selected == 'Outras datas':
             j = response.json()
             df_date_apod = pd.DataFrame.from_dict([j])
 
-            date_apod_ptbr = date_apod.strftime('%d de %B de %Y')
+            date_apod_format = date_apod.strftime('%d de %B de %Y')
+            date_apod_ptbr = translator.translate(date_apod_format)
             title_apod_ptbr = translator.translate(df_date_apod['title'][0])
             st.subheader(f'{date_apod_ptbr} - {title_apod_ptbr}')
             if df_date_apod['media_type'][0] == 'image':
