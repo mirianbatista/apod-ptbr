@@ -1,3 +1,5 @@
 streamlit
 pandas
 pandas_gbq
+streamlit-option-menu
+easygoogletranslate
